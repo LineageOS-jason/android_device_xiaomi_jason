@@ -38,13 +38,22 @@ LOCAL_SRC_FILES:= \
 #        src/mm_qcamera_dual_test.c \
 
 LOCAL_C_INCLUDES:=$(LOCAL_PATH)/inc
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_C_INCLUDES += \
+        system/core/libion/kernel-headers \
+        system/core/libion/include
+endif
 LOCAL_C_INCLUDES+= \
         $(LOCAL_PATH)/../common \
         $(LOCAL_PATH)/../mm-camera-interface/inc \
         $(LOCAL_PATH)/../../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../../mm-image-codec/qomx_core
 
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_SYSTEM_HEAP_ID
+else
 LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID
+endif
 ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
         LOCAL_CFLAGS += -DCAMERA_ION_FALLBACK_HEAP_ID=ION_IOMMU_HEAP_ID
         LOCAL_CFLAGS += -DCAMERA_GRALLOC_CACHING_ID=0
@@ -86,7 +95,9 @@ LOCAL_CFLAGS += -Wall -Wextra -Werror
 
 LOCAL_SHARED_LIBRARIES:= \
          libcutils libdl liblog libmmcamera_interface
-
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_SHARED_LIBRARIES += libion
+endif
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
@@ -134,13 +145,23 @@ LOCAL_SRC_FILES:= \
 #        src/mm_qcamera_dual_test.c \
 
 LOCAL_C_INCLUDES:=$(LOCAL_PATH)/inc
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_C_INCLUDES += \
+        system/core/libion/kernel-headers \
+        system/core/libion/include
+endif
+
 LOCAL_C_INCLUDES+= \
         $(LOCAL_PATH)/../common \
         $(LOCAL_PATH)/../mm-camera-interface/inc \
         $(LOCAL_PATH)/../../../mm-image-codec/qexif \
         $(LOCAL_PATH)/../../../mm-image-codec/qomx_core
 
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_SYSTEM_HEAP_ID
+else
 LOCAL_CFLAGS += -DCAMERA_ION_HEAP_ID=ION_IOMMU_HEAP_ID
+endif
 ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
         LOCAL_CFLAGS += -DCAMERA_ION_FALLBACK_HEAP_ID=ION_IOMMU_HEAP_ID
         LOCAL_CFLAGS += -DCAMERA_GRALLOC_CACHING_ID=0
@@ -182,7 +203,9 @@ LOCAL_CFLAGS += -Wall -Wextra -Werror
 
 LOCAL_SHARED_LIBRARIES:= \
          libcutils libdl liblog libmmcamera_interface
-
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_SHARED_LIBRARIES += libion
+endif
 LOCAL_MODULE_TAGS := optional
 
 LOCAL_32_BIT_ONLY := $(BOARD_QTI_CAMERA_32BIT_ONLY)
