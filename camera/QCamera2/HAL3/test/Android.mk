@@ -13,6 +13,12 @@ else
     LOCAL_CFLAGS += -DCAMERA_CHIPSET_8937
 endif
 
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_C_INCLUDES += \
+        system/core/libion/kernel-headers \
+        system/core/libion/include
+endif
+
 LOCAL_C_INCLUDES += \
     $(LOCAL_PATH)/../ \
     $(LOCAL_PATH)/../../stack/mm-camera-interface/inc \
@@ -35,6 +41,9 @@ LOCAL_SRC_FILES := \
 
 
 LOCAL_SHARED_LIBRARIES:= libutils liblog libcamera_metadata libcutils
+ifneq (,$(filter $(TRINKET),$(TARGET_BOARD_PLATFORM)))
+LOCAL_SHARED_LIBRARIES += libion
+endif
 
 LOCAL_STATIC_LIBRARIES := android.hardware.camera.common@1.0-helper
 
