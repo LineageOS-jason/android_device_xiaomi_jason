@@ -133,7 +133,8 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    JasonWifiOverlay
+    JasonWifiOverlay \
+    wifi-mac-generator
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/jason/jason-vendor.mk)
