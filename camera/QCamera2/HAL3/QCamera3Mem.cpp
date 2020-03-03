@@ -630,14 +630,15 @@ int QCamera3HeapMemory::allocate(size_t size)
             deallocOneBuffer(mMemInfo[i]);
             LOGE("mmap failed for buffer %d", i);
             goto ALLOC_FAILED;
-        } else
+        } else {
             mPtr[i] = vaddr;
+        }
 #ifdef TARGET_ION_ABI_VERSION
-    rc = ioctl(mMemInfo[i].fd, DMA_BUF_IOCTL_SYNC, &buf_sync.flags);
-    if (rc) {
-        LOGE("Failed first DMA_BUF_IOCTL_SYNC start\n");
-        goto ALLOC_FAILED;
-    }
+        rc = ioctl(mMemInfo[i].fd, DMA_BUF_IOCTL_SYNC, &buf_sync.flags);
+        if (rc) {
+            LOGE("Failed first DMA_BUF_IOCTL_SYNC start\n");
+            goto ALLOC_FAILED;
+        }
 #endif //TARGET_ION_ABI_VERSION
     }
     if (rc == 0)
@@ -647,8 +648,10 @@ int QCamera3HeapMemory::allocate(size_t size)
 
 ALLOC_FAILED:
     for (uint32_t j = 0; j < i; j++) {
-        munmap(mPtr[j], mMemInfo[j].size);
-        mPtr[j] = NULL;
+        if (mPtr[j] != NULL) {
+            munmap(mPtr[j], mMemInfo[j].size);
+            mPtr[j] = NULL;
+        }
         deallocOneBuffer(mMemInfo[j]);
     }
     return NO_MEMORY;
@@ -739,8 +742,10 @@ void QCamera3HeapMemory::deallocate()
         LOGE("Failed first DMA_BUF_IOCTL_SYNC start\n");
     }
 #endif //TARGET_ION_ABI_VERSION
-       munmap(mPtr[i], mMemInfo[i].size);
-        mPtr[i] = NULL;
+        if (mPtr[i] != NULL) {
+            munmap(mPtr[i], mMemInfo[i].size);
+            mPtr[i] = NULL;
+        }
         deallocOneBuffer(mMemInfo[i]);
         mCurrentFrameNumbers[i] = -1;
     }
@@ -936,8 +941,8 @@ int QCamera3GrallocMemory::registerBuffer(buffer_handle_t *buffer,
 #ifdef TARGET_ION_ABI_VERSION
     struct dma_buf_sync buf_sync;
     buf_sync.flags = DMA_BUF_SYNC_START | DMA_BUF_SYNC_RW;
-    int rc = ioctl(mMemInfo[idx].fd, DMA_BUF_IOCTL_SYNC, &buf_sync.flags);
-    if (rc) {
+    ret = ioctl(mMemInfo[idx].fd, DMA_BUF_IOCTL_SYNC, &buf_sync.flags);
+    if (ret) {
         LOGE("Failed first DMA_BUF_IOCTL_SYNC start\n");
     }
 #endif //TARGET_ION_ABI_VERSION
@@ -971,8 +976,10 @@ int32_t QCamera3GrallocMemory::unregisterBufferLocked(size_t idx)
     }
 #endif //TARGET_ION_ABI_VERSION
 
-    munmap(mPtr[idx], mMemInfo[idx].size);
-    mPtr[idx] = NULL;
+    if (mPtr[idx] != NULL) {
+        munmap(mPtr[idx], mMemInfo[idx].size);
+        mPtr[idx] = NULL;
+    }
     /*This function is called to remove the fd from wrapper.
     This will not close the fd.*/
     remFdCheck(mMemInfo[idx].fd);
