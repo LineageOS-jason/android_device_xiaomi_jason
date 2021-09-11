@@ -138,6 +138,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_jason
 
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 25
+
 # Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.force_on_dc=true
