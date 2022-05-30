@@ -113,7 +113,7 @@ PRODUCT_SHIPPING_API_LEVEL := 25
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service
+    android.hardware.usb@1.3-service-qti
 
 # VNDK
 PRODUCT_PACKAGES += \
