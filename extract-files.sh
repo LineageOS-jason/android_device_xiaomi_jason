@@ -29,7 +29,7 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libicuuc.so" "${2}"
             "${PATCHELF}" --remove-needed "libminikin.so" "${2}"
             grep -q "libcamera_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
-            grep -q "libpiex-v29.so" "${2}" || "${PATCHELF}" --add-needed "libpiex-v29.so" "${2}"
+            grep -q "libpiex_shim.so" "${2}" || "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
         vendor/lib/libmmcamera2_stats_modules.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"

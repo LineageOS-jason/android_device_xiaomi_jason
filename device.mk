@@ -56,7 +56,8 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    libcamera_shim
+    libcamera_shim \
+    libpiex_shim
 
 # Consumerir
 # BOARD_HAVE_IR := true
@@ -125,9 +126,6 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libstdc++.vendor
-
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libpiex.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpiex-v29.so
 
 # Wifi
 PRODUCT_PACKAGES += \
