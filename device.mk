@@ -56,6 +56,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.avs.afe_api_version=2
 
 # Camera
+PRODUCT_PACKAGES += \
+    libpiex_shim
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.dxoaf.sc=1 \
     persist.camera.gyro.disable=0 \
@@ -149,9 +152,6 @@ PRODUCT_PACKAGES += \
 # VNDK
 PRODUCT_PACKAGES += \
     libstdc++.vendor
-    
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libpiex.so:$(TARGET_COPY_OUT_VENDOR)/lib/libpiex-v29.so
 
 # Wifi
 PRODUCT_PACKAGES += \
