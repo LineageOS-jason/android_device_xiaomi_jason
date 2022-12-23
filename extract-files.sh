@@ -21,6 +21,9 @@ function blob_fixup() {
         vendor/lib/libmpbase.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             ;;
+        vendor/lib/libremosaic_daemon.so)
+            "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v30.so" "${2}"
+            ;;
     esac
 }
 
