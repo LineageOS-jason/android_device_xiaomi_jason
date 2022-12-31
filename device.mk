@@ -57,8 +57,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.sdm660 \
-    libmm-qcamera
+    camera.sdm660
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.hist.high=20 \
