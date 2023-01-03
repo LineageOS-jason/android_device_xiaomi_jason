@@ -8,6 +8,9 @@
 
 function blob_fixup() {
     case "${1}" in
+        vendor/lib64/libgf_hal.so)
+            "${PATCHELF}" --remove-needed "libpowermanager.so" "${2}"
+            ;;
         vendor/lib/libmmcamera2_stats_modules.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF}" --remove-needed "libgui.so" "${2}"
