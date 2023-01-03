@@ -57,10 +57,6 @@ PRODUCT_PACKAGES += \
 # Consumerir
 BOARD_HAVE_IR := true
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    libpowermanager.vendor
-
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-impl \
