@@ -59,7 +59,7 @@ PRODUCT_PACKAGES += \
     libpiex_shim
 
 # Consumerir
-BOARD_HAVE_IR := true
+# BOARD_HAVE_IR := true
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
