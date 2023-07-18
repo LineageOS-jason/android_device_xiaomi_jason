@@ -100,6 +100,7 @@ vendor/lib/libmorpho_video_refiner.so
 vendor/lib/libmpbase.so
 vendor/lib/libois_jason_bu63169_ofilm.so
 vendor/lib/libois_jason_bu63169_semco.so
+vendor/lib/liboisgyro.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
