@@ -1,0 +1,8 @@
+# Camera
+vendor.camera.aux.packageblacklist=com.tencent.mm
+
+# Display
+ro.vendor.display.ad=1
+ro.vendor.display.ad.hdr_calib_data=/system/vendor/etc/hdr_config.cfg
+ro.vendor.display.ad.sdr_calib_data=/system/vendor/etc/sdr_config.cfg
+ro.vendor.display.sensortype=2
