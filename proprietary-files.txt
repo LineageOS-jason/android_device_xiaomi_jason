@@ -399,18 +399,10 @@ vendor/lib64/libsensor1.so|9438649176e37dfa406f4d4858ad31441ad4c3aa
 vendor/lib64/libsensor_reg.so|c09110fd11f384040c31b7fd5c2b187aa901168c
 vendor/lib64/sensors.ssc.so|6934f0fd9e5e74356d9f18af0cbaa28164e697f6
 
-# Thermal
-vendor/bin/thermal-engine
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
-vendor/lib64/libthermalioctl.so
-
-# Thermal configuration
-vendor/etc/thermal-engine-sdm660-high.conf
-vendor/etc/thermal-engine-sdm660-map.conf
-vendor/etc/thermal-engine-sdm660-nolimits.conf
-vendor/etc/thermal-engine-sdm660.conf
-vendor/etc/thermal-engine.conf
+# Thermal - from S62Pro
+vendor/bin/thermal-engine|fe478f3ba50a819f58cc55dc1227bc0e37d30b14
+-vendor/lib/libthermalclient.so|b2d69a3a3589eb0387c2f13cc10ff91072c27c9a
+-vendor/lib64/libthermalclient.so|26475ef0d6b80fcf40c9490f795d21e46d3d9054
 
 # Wifi
 vendor/bin/cnss-daemon
