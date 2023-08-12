@@ -4,9 +4,6 @@
 # Fingerprint
 /data/vendor/calibration(/.*)?                      u:object_r:fingerprint_vendor_data_file:s0
 
-# Lineage hardware
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.jason                       u:object_r:hal_lineage_touch_default_exec:s0
-
 # Readmac
 /(vendor|system/vendor)/bin/readmac                 u:object_r:readmac_exec:s0
 

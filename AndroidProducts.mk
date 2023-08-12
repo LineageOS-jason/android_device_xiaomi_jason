@@ -14,4 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_jason.mk
+    $(LOCAL_DIR)/kscope_jason.mk
+
+COMMON_LUNCH_CHOICES := \
+    kscope_jason-user \
+    kscope_jason-userdebug \
+    kscope_jason-eng
