@@ -8,9 +8,24 @@
 
 function blob_fixup() {
     case "${1}" in
+        vendor/lib/libSonyIMX386PdafLibrary.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_dualcam_optical_zoom.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_dualcam_optical_zoom_control.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
+        vendor/lib/libarcsoft_dualcam_refocus.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            ;;
         vendor/lib/libmmcamera2_stats_modules.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF}" --remove-needed "libgui.so" "${2}"
+            ;;
+        vendor/lib/libmmcamera_hdr_gb_lib.so)
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         vendor/lib/libmmcamera_jason_s5k3p8sp_sunny.so)
             sed -i 's/\x1e\x40\x9a\x99\x99\x99\x99\x99\x3b\x40\x10/\x1e\x40\x9a\x99\x99\x99\x99\x99\x3b\x40\x01/' "${2}"
@@ -20,6 +35,7 @@ function blob_fixup() {
             ;;
         vendor/lib/libmpbase.so)
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         vendor/lib/libremosaic_daemon.so)
             "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v30.so" "${2}"
