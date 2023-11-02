@@ -40,8 +40,14 @@ function blob_fixup() {
         vendor/lib/libremosaic_daemon.so)
             "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v30.so" "${2}"
             ;;
+        vendor/lib64/com.fingerprints.extension@1.0.so)
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            ;;
         vendor/lib64/libgf_hal.so)
             "${PATCHELF}" --remove-needed "libpowermanager.so" "${2}"
+            ;;
+        vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so)
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
     esac
 }
