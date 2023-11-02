@@ -37,8 +37,14 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
+        vendor/lib64/com.fingerprints.extension@1.0.so)
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            ;;
         vendor/lib64/libgf_hal.so)
             "${PATCHELF}" --remove-needed "libpowermanager.so" "${2}"
+            ;;
+        vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so)
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
     esac
 }
