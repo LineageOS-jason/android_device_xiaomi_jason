@@ -77,6 +77,12 @@ on charger
     start thermal-engine
     start charger
 
+service nqnfcinfo /system/vendor/bin/nqnfcinfo
+    class late_start
+    group nfc
+    user system
+    oneshot
+
 service panel-info-sh /vendor/bin/init.panel_info.sh
     class core
     user root
