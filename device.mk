@@ -54,7 +54,7 @@ PRODUCT_PACKAGES += \
     camera.sdm660
 
 # Consumerir
-# BOARD_HAVE_IR := true
+BOARD_HAVE_IR := true
 
 # Gatekeeper HAL
 PRODUCT_PACKAGES += \
