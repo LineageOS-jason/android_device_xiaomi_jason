@@ -364,12 +364,5 @@ vendor/bin/thermal-engine
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Thermal configuration
-vendor/etc/thermal-engine-sdm660-high.conf
-vendor/etc/thermal-engine-sdm660-map.conf
-vendor/etc/thermal-engine-sdm660-nolimits.conf
-vendor/etc/thermal-engine-sdm660.conf
-vendor/etc/thermal-engine.conf
-
 # Wifi
 vendor/bin/cnss-daemon
