@@ -326,7 +326,6 @@ vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.sdm660.so
 vendor/lib64/hw/gatekeeper.sdm660.so
 
 # Graphics firmware - from lavender
