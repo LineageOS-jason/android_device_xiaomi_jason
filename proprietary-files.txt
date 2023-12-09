@@ -1,7 +1,8 @@
+# jason package version: V12.0.1.0.PCHCNXM
 # lavender package version: V12.5.7.0.QFGCNXM
 # S62Pro package version: Cat S62Pro sdm660_64-user 11 RKQ1.210406.002 1.015.00
 
-# Audio ACDB
+# Audio ACDB - from jason
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_General_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Global_cal.acdb
@@ -12,7 +13,7 @@ vendor/etc/acdbdata/Forte/Forte_Speaker_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_workspaceFile.qwsp
 vendor/etc/acdbdata/adsp_avs_config.acdb
 
-# Camera
+# Camera - from jason
 vendor/bin/remosaic_daemon
 vendor/lib/libSonyIMX386PdafLibrary.so
 vendor/lib/libarcsoft_dualcam_optical_zoom.so
@@ -89,13 +90,13 @@ vendor/lib/libremosaiclib.so
 vendor/lib64/libremosaic_daemon.so
 vendor/lib64/libremosaiclib.so
 
-# Camera actuators
+# Camera actuators - from jason
 vendor/lib/libactuator_jason_imx386_ak7372_semco.so
 vendor/lib/libactuator_jason_imx386_ak7374_ofilm.so
 vendor/lib/libactuator_jason_s5k3m3_ak7372_semco.so
 vendor/lib/libactuator_jason_s5k3m3_ak7374_ofilm.so
 
-# Camera chromatix
+# Camera chromatix - from jason
 vendor/lib/libchromatix_jason_imx386_ofilm_4K_preview.so
 vendor/lib/libchromatix_jason_imx386_ofilm_4K_video.so
 vendor/lib/libchromatix_jason_imx386_ofilm_common.so
@@ -245,7 +246,7 @@ vendor/lib/libchromatix_jason_s5k3p8sp_sunny_snapshot.so
 vendor/lib/libchromatix_jason_s5k3p8sp_sunny_snapshot_4m.so
 vendor/lib/libchromatix_jason_s5k3p8sp_sunny_video.so
 
-# Camera configs
+# Camera configs - from jason
 vendor/etc/camera/camera_config.xml
 vendor/etc/camera/jason_imx386_ofilm_chromatix.xml
 vendor/etc/camera/jason_imx386_semco_chromatix.xml
@@ -253,16 +254,16 @@ vendor/etc/camera/jason_s5k3m3_ofilm_chromatix.xml
 vendor/etc/camera/jason_s5k3m3_semco_chromatix.xml
 vendor/etc/camera/jason_s5k3p8sp_sunny_chromatix.xml
 
-# Camera firmware
+# Camera firmware - from jason
 vendor/firmware/cpp_firmware_v1_12_0.fw
 
-# Camera OIS firmware
+# Camera OIS firmware - from jason
 etc/firmware/jason_bu63169_ofilm.coeff:vendor/firmware/jason_bu63169_ofilm.coeff
 etc/firmware/jason_bu63169_ofilm.prog:vendor/firmware/jason_bu63169_ofilm.prog
 etc/firmware/jason_bu63169_semco.coeff:vendor/firmware/jason_bu63169_semco.coeff
 etc/firmware/jason_bu63169_semco.prog:vendor/firmware/jason_bu63169_semco.prog
 
-# Camera sensors
+# Camera sensors - from jason
 vendor/lib/libmmcamera_isp_abf48.so
 vendor/lib/libmmcamera_isp_aec_bg_stats47.so
 vendor/lib/libmmcamera_isp_bf_stats47.so
@@ -308,16 +309,16 @@ vendor/lib/libmmcamera_isp_sce40.so
 vendor/lib/libmmcamera_isp_snr47.so
 vendor/lib/libmmcamera_isp_sub_module.so
 
-# Consumerir
+# Consumerir - from jason
 vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.sdm660.so
 
-# Display calibration data
+# Display calibration data - from jason
 vendor/etc/hdr_config.cfg
 vendor/etc/qdcm_calib_data_jdi_fhd_cmd_incell_dsi_panel.xml
 vendor/etc/qdcm_calib_data_sharp_fhd_cmd_incell_dsi_panel.xml
 vendor/etc/sdr_config.cfg
 
-# Fingerprint sensor
+# Fingerprint sensor - from jason
 vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.sdm660.so
 vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.sdm660.so
 vendor/lib64/com.fingerprints.extension@1.0.so
@@ -325,7 +326,7 @@ vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so
 
-# Gatekeeper
+# Gatekeeper - from jason
 vendor/lib64/hw/gatekeeper.sdm660.so
 
 # Graphics firmware - from lavender
@@ -338,13 +339,13 @@ vendor/firmware/a530_gpmu.fw2|706da8d5ee565dcf456341f805ee75a40773f65a
 vendor/firmware/a530_pfp.fw|c19e1905c15622d7bb02409e6748959bceda9b08
 vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
 
-# Keystore
+# Keystore - from jason
 vendor/lib64/hw/keystore.sdm660.so
 
-# NFC firmware
+# NFC firmware - from jason
 vendor/lib/libpn553_fw.so
 
-# QMI
+# QMI - from jason
 vendor/lib64/libqminvapi.so
 
 # Sensors - from S62Pro
@@ -362,5 +363,5 @@ vendor/lib64/sensors.ssc.so|6934f0fd9e5e74356d9f18af0cbaa28164e697f6
 -vendor/lib64/libthermalclient.so|26475ef0d6b80fcf40c9490f795d21e46d3d9054
 vendor/bin/thermal-engine|fe478f3ba50a819f58cc55dc1227bc0e37d30b14
 
-# Wifi
+# Wifi - from jason
 vendor/bin/cnss-daemon
