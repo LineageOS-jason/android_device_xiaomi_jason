@@ -363,5 +363,5 @@ vendor/lib64/sensors.ssc.so|6934f0fd9e5e74356d9f18af0cbaa28164e697f6
 -vendor/lib64/libthermalclient.so|26475ef0d6b80fcf40c9490f795d21e46d3d9054
 vendor/bin/thermal-engine|fe478f3ba50a819f58cc55dc1227bc0e37d30b14
 
-# Wifi - from S62Pro
-vendor/bin/cnss-daemon|3137d9a479fe6e363896fe77248bcb488fae2c2e
+# Wifi - from jason
+vendor/bin/cnss-daemon
