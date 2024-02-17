@@ -319,10 +319,6 @@ vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.sdm660.
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 
-# Fingerprint sensor - from dipper V12.5.1.0.QEACNXM
-vendor/lib64/com.fingerprints.extension@1.0.so|614145c9bb0deb9795d4b2bebf7e845886abb1f6
-vendor/lib64/vendor.goodix.hardware.fingerprintextension@1.0.so|8f95d946dae070676ae05db6d6aac9524cca790b
-
 # Gatekeeper
 vendor/lib/hw/gatekeeper.sdm660.so
 vendor/lib64/hw/gatekeeper.sdm660.so
