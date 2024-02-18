@@ -81,10 +81,12 @@ vendor/lib/libois_jason_bu63169_semco.so
 vendor/lib/libqomx_jpegdec.so
 vendor/lib/libqomx_jpegenc.so
 vendor/lib/libqomx_jpegenc_pipe.so
-vendor/lib/libremosaic_daemon.so
 vendor/lib/libremosaiclib.so
 vendor/lib64/libremosaic_daemon.so
 vendor/lib64/libremosaiclib.so
+
+# Camera - from sagit V11.0.6.0.PCAMIXM
+vendor/lib/libremosaic_daemon.so|3a80ce17952836eff4cbcc86e58149ba357375c3
 
 # Camera actuators
 vendor/lib/libactuator_jason_imx386_ak7372_semco.so

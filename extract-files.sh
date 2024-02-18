@@ -37,9 +37,6 @@ function blob_fixup() {
             "${PATCHELF}" --remove-needed "libandroid.so" "${2}"
             "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
-        vendor/lib/libremosaic_daemon.so)
-            "${PATCHELF}" --replace-needed "libbinder.so" "libbinder-v30.so" "${2}"
-            ;;
         vendor/lib64/libgf_hal.so)
             "${PATCHELF}" --remove-needed "libpowermanager.so" "${2}"
             ;;
