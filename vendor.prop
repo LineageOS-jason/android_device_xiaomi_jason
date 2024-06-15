@@ -16,6 +16,7 @@ persist.vendor.camera.sat.enable=1
 persist.vendor.camera.set.afd=4
 persist.vendor.dualcam.defer.enable=1
 persist.vendor.dualcam.lpm.enable=1
+vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
 
 # Telephony
 persist.vendor.radio.force_on_dc=true
