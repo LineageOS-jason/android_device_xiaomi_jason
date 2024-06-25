@@ -26,6 +26,9 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/jason
 
+# A/B
+AB_OTA_UPDATER := false
+
 # Kernel
 TARGET_KERNEL_CONFIG += vendor/xiaomi/jason.config
 
