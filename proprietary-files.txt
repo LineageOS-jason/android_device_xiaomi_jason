@@ -1,3 +1,8 @@
+# Current blobs with ELF checks disabled:
+# libarcsoft_dualcam_optical_zoom, libmmcamera2_cpp_module, libmmcamera2_iface_modules, libmmcamera2_imglib_modules,
+# libmmcamera2_isp_modules, libmmcamera2_mct, libmmcamera2_sensor_modules, libmmcamera_interface,
+# libmmjpeg_interface depend on intrinsic symbols which changed namespace (__aeabi_uldivmod, __aeabi_ldivmod, etc.), which are difficult to shim (TODO)
+
 # ADSP - from jasmine
 vendor/lib/libadsp_hvx_callback_skel.so
 vendor/lib/libadsp_hvx_stub.so
@@ -19,7 +24,7 @@ vendor/lib/libremosaic_daemon.so|3a80ce17952836eff4cbcc86e58149ba357375c3
 # Camera
 vendor/bin/remosaic_daemon
 vendor/lib/libSonyIMX386PdafLibrary.so
-vendor/lib/libarcsoft_dualcam_optical_zoom.so
+vendor/lib/libarcsoft_dualcam_optical_zoom.so;DISABLE_CHECKELF
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libflash_pmic.so
@@ -27,21 +32,21 @@ vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_cpp_module.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_frame_algorithm.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_iface_modules.so;DISABLE_CHECKELF
+vendor/lib/libmmcamera2_imglib_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_is.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_mct.so
+vendor/lib/libmmcamera2_isp_modules.so;DISABLE_CHECKELF
+vendor/lib/libmmcamera2_mct.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_mct_shimlayer.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_lib.so
-vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_stats_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera_arcrtb_lib.so
 vendor/lib/libmmcamera_arcsoft_smoothtranstion_wrapper_lib.so
 vendor/lib/libmmcamera_dbg.so
