@@ -360,8 +360,8 @@ vendor/firmware/a530_pm4.fw
 
 # Thermal
 vendor/bin/thermal-engine
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
 # Thermal configuration
