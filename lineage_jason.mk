@@ -34,10 +34,9 @@ PRODUCT_MODEL := Mi Note 3
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE="jason" \
-    PRODUCT_NAME="jason" \
-    PRIVATE_BUILD_DESC="jason-user 9 PKQ1.181007.001 V12.0.1.0.PCHCNXM release-keys"
-
-BUILD_FINGERPRINT := "Xiaomi/jason/jason:9/PKQ1.181007.001/V12.0.1.0.PCHCNXM:user/release-keys"
+    BuildDesc="jason-user 9 PKQ1.181007.001 V12.0.1.0.PCHCNXM release-keys" \
+    BuildFingerprint=Xiaomi/jason/jason:9/PKQ1.181007.001/V12.0.1.0.PCHCNXM:user/release-keys \
+    DeviceName=jason \
+    DeviceProduct=jason
 
 TARGET_VENDOR := Xiaomi
