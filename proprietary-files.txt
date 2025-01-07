@@ -256,10 +256,10 @@ vendor/etc/camera/jason_s5k3p8sp_sunny_chromatix.xml
 vendor/firmware/cpp_firmware_v1_12_0.fw
 
 # Camera OIS firmware
-etc/firmware/jason_bu63169_ofilm.coeff:vendor/firmware/jason_bu63169_ofilm.coeff
-etc/firmware/jason_bu63169_ofilm.prog:vendor/firmware/jason_bu63169_ofilm.prog
-etc/firmware/jason_bu63169_semco.coeff:vendor/firmware/jason_bu63169_semco.coeff
-etc/firmware/jason_bu63169_semco.prog:vendor/firmware/jason_bu63169_semco.prog
+system/etc/firmware/jason_bu63169_ofilm.coeff:vendor/firmware/jason_bu63169_ofilm.coeff
+system/etc/firmware/jason_bu63169_ofilm.prog:vendor/firmware/jason_bu63169_ofilm.prog
+system/etc/firmware/jason_bu63169_semco.coeff:vendor/firmware/jason_bu63169_semco.coeff
+system/etc/firmware/jason_bu63169_semco.prog:vendor/firmware/jason_bu63169_semco.prog
 
 # Camera sensors
 vendor/lib/libmmcamera_isp_abf48.so
