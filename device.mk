@@ -51,8 +51,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.sdm660 \
-    libmm-qcamera
+    camera.sdm660
 
 # Consumerir
 BOARD_HAVE_IR := true
