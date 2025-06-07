@@ -52,6 +52,12 @@ on boot
     chown system system /sys/class/leds/button-backlight1/brightness
     chmod 660 /sys/class/leds/button-backlight1/brightness
 
+    # Touchscreen
+    chown system system /sys/touchpanel/capacitive_keys
+    chown system system /sys/touchpanel/reversed_keys
+    chmod 0660 /sys/touchpanel/capacitive_keys
+    chmod 0660 /sys/touchpanel/reversed_keys
+
 on post-fs-data
     mkdir /data/vendor/calibration 0770 system system
     chmod 0600 /mnt/vendor/persist/fpc/calibration_image.pndat

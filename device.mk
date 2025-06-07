@@ -79,7 +79,10 @@ PRODUCT_PACKAGES += \
 
 # Lineage hardware
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.jason
+    vendor.lineage.touch-service.xiaomi
+
+$(call soong_config_set,XIAOMI_TOUCH,KEY_DISABLER_CONTROL_PATH,/sys/touchpanel/capacitive_keys)
+$(call soong_config_set,XIAOMI_TOUCH,KEY_SWAPPER_CONTROL_PATH,/sys/touchpanel/reversed_keys)
 
 # NFC
 PRODUCT_PACKAGES += \
