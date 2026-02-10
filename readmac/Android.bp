@@ -1,0 +1,19 @@
+//
+// Copyright (C) 2026 The LineageOS Project
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_binary {
+    name: "readmac",
+    srcs: [
+        "xiaomi_readmac.cpp",
+    ],
+    vendor: true,
+    header_libs: [
+        "libcutils_headers",
+    ],
+    shared_libs: [
+        "libbase",
+    ],
+}
