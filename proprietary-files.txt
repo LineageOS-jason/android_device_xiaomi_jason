@@ -12,7 +12,7 @@ vendor/etc/acdbdata/adsp_avs_config.acdb
 # Camera
 vendor/bin/remosaic_daemon
 vendor/lib/libSonyIMX386PdafLibrary.so
-vendor/lib/libarcsoft_dualcam_optical_zoom.so
+vendor/lib/libarcsoft_dualcam_optical_zoom.so;DISABLE_CHECKELF
 vendor/lib/libarcsoft_dualcam_optical_zoom_control.so
 vendor/lib/libarcsoft_dualcam_refocus.so
 vendor/lib/libflash_pmic.so
@@ -20,21 +20,21 @@ vendor/lib/libjpegdhw.so
 vendor/lib/libjpegdmahw.so
 vendor/lib/libjpegehw.so
 vendor/lib/libmmcamera2_c2d_module.so
-vendor/lib/libmmcamera2_cpp_module.so
+vendor/lib/libmmcamera2_cpp_module.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_frame_algorithm.so
-vendor/lib/libmmcamera2_iface_modules.so
-vendor/lib/libmmcamera2_imglib_modules.so
+vendor/lib/libmmcamera2_iface_modules.so;DISABLE_CHECKELF
+vendor/lib/libmmcamera2_imglib_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_is.so
-vendor/lib/libmmcamera2_isp_modules.so
-vendor/lib/libmmcamera2_mct.so
+vendor/lib/libmmcamera2_isp_modules.so;DISABLE_CHECKELF
+vendor/lib/libmmcamera2_mct.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_mct_shimlayer.so
 vendor/lib/libmmcamera2_pp_buf_mgr.so
 vendor/lib/libmmcamera2_pproc_modules.so
 vendor/lib/libmmcamera2_q3a_core.so
-vendor/lib/libmmcamera2_sensor_modules.so
+vendor/lib/libmmcamera2_sensor_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera2_stats_algorithm.so
 vendor/lib/libmmcamera2_stats_lib.so
-vendor/lib/libmmcamera2_stats_modules.so
+vendor/lib/libmmcamera2_stats_modules.so;DISABLE_CHECKELF
 vendor/lib/libmmcamera_arcrtb_lib.so
 vendor/lib/libmmcamera_arcsoft_smoothtranstion_wrapper_lib.so
 vendor/lib/libmmcamera_dbg.so
@@ -256,10 +256,10 @@ vendor/etc/camera/jason_s5k3p8sp_sunny_chromatix.xml
 vendor/firmware/cpp_firmware_v1_12_0.fw
 
 # Camera OIS firmware
-etc/firmware/jason_bu63169_ofilm.coeff:vendor/firmware/jason_bu63169_ofilm.coeff
-etc/firmware/jason_bu63169_ofilm.prog:vendor/firmware/jason_bu63169_ofilm.prog
-etc/firmware/jason_bu63169_semco.coeff:vendor/firmware/jason_bu63169_semco.coeff
-etc/firmware/jason_bu63169_semco.prog:vendor/firmware/jason_bu63169_semco.prog
+system/etc/firmware/jason_bu63169_ofilm.coeff:vendor/firmware/jason_bu63169_ofilm.coeff
+system/etc/firmware/jason_bu63169_ofilm.prog:vendor/firmware/jason_bu63169_ofilm.prog
+system/etc/firmware/jason_bu63169_semco.coeff:vendor/firmware/jason_bu63169_semco.coeff
+system/etc/firmware/jason_bu63169_semco.prog:vendor/firmware/jason_bu63169_semco.prog
 
 # Camera sensors
 vendor/lib/libmmcamera_isp_abf48.so
@@ -314,8 +314,8 @@ vendor/etc/qdcm_calib_data_sharp_fhd_cmd_incell_dsi_panel.xml
 vendor/etc/sdr_config.cfg
 
 # Fingerprint sensor
-vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.sdm660.so
-vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.sdm660.so
+vendor/lib64/hw/fingerprint.fpc.so:vendor/lib64/hw/fingerprint.fpc.sdm660.so;FIX_SONAME
+vendor/lib64/hw/fingerprint.goodix.so:vendor/lib64/hw/fingerprint.goodix.sdm660.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 
@@ -326,7 +326,7 @@ vendor/lib64/hw/gatekeeper.sdm660.so
 vendor/lib64/hw/keystore.sdm660.so
 
 # NFC firmware
-vendor/lib/libpn553_fw.so
+vendor/lib/libpn553_fw.so:vendor/lib64/libpn553_fw.so
 
 # QMI
 vendor/lib64/libqminvapi.so
@@ -354,8 +354,8 @@ vendor/firmware/a530_pm4.fw
 
 # Thermal
 vendor/bin/thermal-engine
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
 # Thermal configuration
