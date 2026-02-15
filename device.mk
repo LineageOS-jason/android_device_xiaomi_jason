@@ -108,7 +108,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.panel_info.sh \
     init.device.rc \
-    fstab.qcom
+    fstab.qcom \
+    fstab.qcom.ramdisk
 
 # Recovery
 PRODUCT_PACKAGES += \
