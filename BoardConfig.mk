@@ -30,7 +30,6 @@ DEVICE_PATH := device/xiaomi/jason
 INLINE_KERNEL_BUILDING := true
 TARGET_FORCE_PREBUILT_KERNEL := true
 TARGET_KERNEL_CONFIG := jason_defconfig
-TARGET_KERNEL_LLVM_BINUTILS := false
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/Image.gz-dtb
 
 # Camera
