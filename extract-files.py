@@ -18,10 +18,10 @@ from extract_utils.fixups_blob import (
 )
 
 namespace_imports = [
-    'hardware/xiaomi',
     'hardware/qcom-caf/common/libqti-perfd-client',
     'hardware/qcom-caf/msm8998',
     'hardware/qcom-caf/wlan',
+    'hardware/xiaomi',
     'vendor/xiaomi/sdm660-common',
 ]
 
