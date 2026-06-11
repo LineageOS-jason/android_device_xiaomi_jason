@@ -1,5 +1,3 @@
-Copyright (C) 2017 - The LineageOS Project
-
 Device configuration for Xiaomi Mi Note 3
 ==============
 
@@ -26,3 +24,11 @@ It was announced in September 2017. Release date was September 2017.
 ## Device picture
 
 ![Xiaomi Mi Note 3](https://i1.mifile.cn/f/i/17/minote3/specs_black.jpg "Xiaomi Mi Note 3 in black")
+
+## Copyright
+
+```
+#
+# SPDX-FileCopyrightText: The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
+#
