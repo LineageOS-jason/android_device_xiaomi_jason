@@ -17,6 +17,15 @@ from extract_utils.main import (
     ExtractUtilsModule,
 )
 
+namespace_imports = [
+    'hardware/qcom-caf/common/libqti-perfd-client',
+    'hardware/qcom-caf/sdm660',
+    'hardware/qcom-caf/wlan',
+    'hardware/xiaomi',
+    'vendor/qcom/opensource/display',
+    'vendor/xiaomi/sdm660-common',
+]
+
 blob_fixups: blob_fixups_user_type = {
     (
         'vendor/lib/libSonyIMX386PdafLibrary.so',
@@ -56,7 +65,7 @@ module = ExtractUtilsModule(
     'jason',
     'xiaomi',
     blob_fixups=blob_fixups,
-    check_elf=False,
+    namespace_imports=namespace_imports,
 )
 
 if __name__ == '__main__':
